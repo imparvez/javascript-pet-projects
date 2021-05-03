@@ -59,6 +59,11 @@ function displayResult(dDate, dMonth, dYear) {
     document.getElementById('days').textContent = dDate;
 }
 
+/**
+ * A year is a leap year if the following conditions are satisfied:
+ * The year is a multiple of 400.
+ * The year is a multiple of 4 and not a multiple of 100.
+ */
 function leapChecker(year) {
     if(year % 4 == 0 || (year % 100 == 0 && year % 400 == 0)) {
         months[1] = 29;
